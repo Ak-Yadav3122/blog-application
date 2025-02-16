@@ -6,8 +6,8 @@ import { Search, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { SignedOut, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { SignedIn, UserButton } from "@clerk/nextjs";
-import SearchInput from "./search-input";
 import ModeToggle from "./toggle-mode";
+import SearchInput from "./search-input";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
