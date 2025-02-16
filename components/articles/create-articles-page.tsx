@@ -10,7 +10,7 @@ import { createArticles } from "@/actions/create-article";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
  
-export function CreateArticlePage() {
+const  CreateArticlePage=()=> {
   const [content, setContent] = useState("");
 
   const [formState, action, isPending] = useActionState(createArticles, {
@@ -120,3 +120,4 @@ export function CreateArticlePage() {
     </div>
   );
 }
+export default CreateArticlePage
