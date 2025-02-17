@@ -1,10 +1,13 @@
-import { BlogDashboard } from '@/components/dashboard/blog-dashboard'
-import React from 'react'
+import CreateArticlePage from "@/components/articles/create-articles-page";
+import { BlogDashboard } from "@/components/dashboard/blog-dashboard";
+import React from "react";
 
 const Dashboard = () => {
   return (
-    <BlogDashboard/>
-  )
-}
+    <div>
+      <BlogDashboard />
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;
