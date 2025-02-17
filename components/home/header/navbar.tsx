@@ -8,6 +8,7 @@ import { SignedOut, SignInButton, SignUpButton } from "@clerk/nextjs";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import ModeToggle from "./toggle-mode";
 import SearchInput from "./search-input";
+import { searchAction } from "@/actions/search";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,25 +33,25 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/articles"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium transition-colors hover:text-foreground"
               >
                 Articles
               </Link>
               <Link
                 href="/tutorials"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium transition-colors hover:text-foreground"
               >
                 Tutorials
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium transition-colors hover:text-foreground"
               >
                 About
               </Link>
               <Link
                 href="/dashboard"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium  transition-colors hover:text-foreground"
               >
                 Dashboard
               </Link>
@@ -84,7 +85,7 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden text-muted-foreground hover:text-foreground"
+               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 transition-transform hover:scale-110"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
@@ -98,21 +99,22 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t">
+          <div className="md:hidden absolute top-full left-0 w-full bg-background shadow-lg">
             {/* Search Bar (Mobile) */}
             <div className="px-4">
-              <div className="relative">
+              <form action={searchAction} className="relative">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   type="search"
+                  name="search"
                   placeholder="Search articles..."
                   className="pl-10 w-full focus-visible:ring-1"
                 />
-              </div>
+              </form>
             </div>
 
             {/* Mobile Navigation Links */}
-            <div className="space-y-2 px-4">
+            <div className="flex flex-col items-center space-y-4 py-6">
               <Link
                 href="/articles"
                 className="block px-3 py-2 text-base font-medium text-foreground"
