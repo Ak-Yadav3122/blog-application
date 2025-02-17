@@ -2,17 +2,35 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const HeroSection = () => {
+  // List of images for the slider
+  const images = [
+    "/blog-image8.jpg",
+    "/blog-image7.webp",
+    "/blog-image2.avif",
+    "/blog-image6.avif",
+    "/blog-image5.avif",
+    "/blog-image3.avif",
+    "/blog-image.jpg",
+    "/blog-image4.avif",
+  ];
+
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden bg-gradient-to-br from-purple-950 via-indigo-950 to-indigo-950">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-purple-950 via-indigo-950 to-indigo-950">
       {/* Gradient overlay */}
       <div className="absolute inset-0 before:absolute before:left-1/4 before:top-0 before:h-[500px] before:w-[500px] before:rounded-full before:bg-gradient-to-r before:from-violet-600/20 before:to-indigo-600/20 before:blur-3xl" />
 
-      <div className="container relative mx-auto flex h-full flex-col items-center justify-center px-4 py-24 md:flex-row md:py-32">
+      <div className="container relative mx-auto flex flex-col-reverse items-center justify-center px-6 py-20 text-center md:flex-row md:text-left md:py-32">
         {/* Content */}
-        <div className="flex-1 space-y-8 text-center md:text-left">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+        <div className="flex-1 space-y-6">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
             Explore the World Through
             <span className="bg-gradient-to-r from-violet-300 to-indigo-700 bg-clip-text text-transparent">
               {" "}
@@ -25,57 +43,78 @@ const HeroSection = () => {
             perspectives on technology, lifestyle, and innovation.
           </p>
 
-          <div className="flex flex-col items-center gap-4 sm:flex-row md:justify-start">
-            <Button size="lg" className="rounded-full px-8 py-6 text-lg">
-              Start Reading
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full px-8 py-6 text-lg dark:text-white"
-            >
-              Explore Topics
-            </Button>
+          <div className="flex flex-col items-center gap-4 sm:flex-row md:items-start">
+            <Link href="/">
+              <Button
+                size="lg"
+                className="w-full rounded-full px-8 py-4 text-lg sm:w-auto"
+              >
+                Start Reading
+              </Button>
+            </Link>
+            <Link href="/">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full rounded-full px-8 py-4 text-lg dark:text-white sm:w-auto"
+              >
+                Explore Topics
+              </Button>
+            </Link>
           </div>
 
-          {/* Stats */}
-
+          {/* Stats Section */}
           <div className="grid grid-cols-3 gap-4 pt-8 text-white md:max-w-md">
-            <div className="space-y-2">
+            <div className="space-y-2 text-center md:text-left">
               <div className="text-2xl font-bold text-primary">1K+</div>
               <div className="text-sm text-gray-400">Published Articles</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-2xl font-bold text-primary">50+</div>
+            <div className="space-y-2 text-center md:text-left">
+              <div className="text-2xl font-bold text-primary">10+</div>
               <div className="text-sm text-gray-400">Expert Writers</div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 text-center md:text-left">
               <div className="text-2xl font-bold text-primary">10M+</div>
               <div className="text-sm text-gray-400">Monthly Readers</div>
             </div>
           </div>
         </div>
 
-        {/* image frame*/}
-        <div className="mt-12 flex-1 md:mt-0">
+        {/* Image Slider */}
+        <div className="flex-1 mt-12 md:mt-0 flex justify-center">
           <div
             className={cn(
-              "relative mx-auto h-64 w-64 rounded-2xl overflow-hidden",
+              "relative w-64 h-64 rounded-2xl overflow-hidden",
               "bg-gradient-to-br from-white/5 to-transparent",
               "border border-primary/20 backdrop-blur-lg",
               "shadow-2xl shadow-indigo-500/10"
             )}
           >
-            <Image
-              src="/blog-image.jpg"
-              alt="Illustration for the blog"
-              fill
-              className="object-cover"
-            />
+            <Swiper
+              modules={[Autoplay, Pagination, Navigation]}
+              spaceBetween={10}
+              slidesPerView={1}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={false}
+              className="w-full h-full"
+            >
+              {images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={img}
+                    alt={`Slide ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default HeroSection;
