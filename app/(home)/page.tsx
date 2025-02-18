@@ -30,7 +30,7 @@ const page = async () => {
           <div className="mt-12 text-center">
             <Link href={"/articles"}>
               <Button
-                variant="outline"
+                // variant="outline"
                 className="rounded-full px-8 py-6 text-lg hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
                 View All Articles

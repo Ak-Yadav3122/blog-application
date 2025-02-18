@@ -47,16 +47,15 @@ const HeroSection = () => {
             <Link href="/">
               <Button
                 size="lg"
-                className="w-full rounded-full px-8 py-4 text-lg sm:w-auto"
+                className="w-full rounded-full px-8 py-4 text-lg sm:w-auto hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
                 Start Reading
               </Button>
             </Link>
             <Link href="/">
               <Button
-                variant="outline"
                 size="lg"
-                className="w-full rounded-full px-8 py-4 text-lg dark:text-white sm:w-auto"
+                className="w-full rounded-full px-8 py-4 text-lg sm:w-auto hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
                 Explore Topics
               </Button>
@@ -64,18 +63,30 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-3 gap-4 pt-8 text-white md:max-w-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 text-white md:max-w-md">
             <div className="space-y-2 text-center md:text-left">
-              <div className="text-2xl font-bold text-primary">1K+</div>
-              <div className="text-sm text-gray-400">Published Articles</div>
+              <div className="text-2xl font-bold text-primary dark:text-primary-500 ">
+                1K+
+              </div>
+              <div className="text-sm text-gray-400 dark:text-gray-300">
+                Published Articles
+              </div>
             </div>
             <div className="space-y-2 text-center md:text-left">
-              <div className="text-2xl font-bold text-primary">10+</div>
-              <div className="text-sm text-gray-400">Expert Writers</div>
+              <div className="text-2xl font-bold text-primary dark:text-primary-500">
+                10+
+              </div>
+              <div className="text-sm text-gray-400 dark:text-gray-300">
+                Expert Writers
+              </div>
             </div>
             <div className="space-y-2 text-center md:text-left">
-              <div className="text-2xl font-bold text-primary">10M+</div>
-              <div className="text-sm text-gray-400">Monthly Readers</div>
+              <div className="text-2xl font-bold text-primary dark:text-primary-500">
+                10M+
+              </div>
+              <div className="text-sm text-gray-400 dark:text-gray-300">
+                Monthly Readers
+              </div>
             </div>
           </div>
         </div>
