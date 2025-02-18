@@ -11,7 +11,7 @@ type SearchPageProps = {
   searchParams: { search?: string; page?: string };
 };
 
-const ITEMS_PER_PAGE = 3; // Number of items per page 
+const ITEMS_PER_PAGE = 3; // Number of items per page
 
 const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
   const searchText = searchParams.search || "";
@@ -26,7 +26,6 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
 
   return (
     <div className=" relative min-h-[600px] w-full overflow-hidden bg-gradient-to-br from-pink-950 via-indigo-950 to-violet-950 ">
-
       <main className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="mb-12 space-y-6 text-center">
@@ -38,13 +37,11 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
           <Suspense>
             <ArticleSearchInput />
           </Suspense>
-          
         </div>
         {/* All article page  */}
         <Suspense fallback={<AllArticlesPageSkeleton />}>
           <AllArticlesPage articles={articles} />
         </Suspense>
-        {/* <AllArticlesPageSkeleton/> */}
         {/* Pagination */}
         <div className="mt-12 flex justify-center gap-2">
           {/* Prev Button */}
