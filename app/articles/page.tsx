@@ -46,7 +46,9 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
         <div className="mt-12 flex justify-center gap-2">
           {/* Prev Button */}
           <Link href={`?search=${searchText}&page=${currentPage - 1}`} passHref>
-            <Button variant="ghost" size="sm" disabled={currentPage === 1}>
+            <Button  size="sm" disabled={currentPage === 1}
+            className="text-white dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-300">
+
               ← Prev
             </Button>
           </Link>
@@ -73,10 +75,11 @@ const page: React.FC<SearchPageProps> = async ({ searchParams }) => {
           {/* Next Button */}
           <Link href={`?search=${searchText}&page=${currentPage + 1}`} passHref>
             <Button
-              variant="ghost"
+              
               size="sm"
               disabled={currentPage === totalPages}
-            >
+              className="text-white dark:text-white hover:bg-gray-300 dark:hover:bg-gray-700 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-300">
+            
               Next →
             </Button>
           </Link>

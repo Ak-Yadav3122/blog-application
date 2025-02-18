@@ -23,48 +23,46 @@ export function AllArticlesPage({ articles }: SearchPageProps) {
   if (articles.length === 0) return <NoSearchResults />;
 
   return (
-    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {articles.map((article) => (
-        <Card
-          key={article.id}
-          className="group relative overflow-hidden transition-all hover:shadow-lg"
-        >
-          <div className="p-6">
-            {/* Image Container */}
-            <Link href={`/articles/${article.id}`}>
-              <div className="relative mb-4 h-48 w-full overflow-hidden rounded-xl">
-                <Image
-                  src={article.featuredImage as string}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              {/* Article Content */}
-              <h3 className="text-xl font-semibold text-foreground">
-                {article.title}
-              </h3>
-              <p className="mt-2 text-muted-foreground">{article.category}</p>
-
-              {/* Author & Metadata */}
-              <div className="mt-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-8 w-8">
-                    <AvatarImage src={article.author.imageUrl as string} />
-                    <AvatarFallback>{article.author.name}</AvatarFallback>
-                  </Avatar>
-                  <span className="text-sm text-muted-foreground">
-                    {article.author.name}
-                  </span>
+    <div className="w-full px-4 sm:px-6 lg:px-8">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        {articles.map((article) => (
+          <Card
+            key={article.id}
+            className="group overflow-hidden transition-all hover:shadow-lg"
+          >
+            <div className="p-6">
+              <Link href={`/articles/${article.id}`}>
+                <div className="relative mb-4 h-48 w-full overflow-hidden rounded-xl">
+                  <Image
+                    src={article.featuredImage as string}
+                    alt={article.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="text-sm ml-3 text-muted-foreground">
-                  {article.createdAt.toDateString()}
+                <h3 className="text-xl font-semibold text-foreground">
+                  {article.title}
+                </h3>
+                <p className="mt-2 text-muted-foreground">{article.category}</p>
+                <div className="mt-6 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-8 w-8">
+                      <AvatarImage src={article.author.imageUrl as string} />
+                      <AvatarFallback>{article.author.name}</AvatarFallback>
+                    </Avatar>
+                    <span className="text-sm text-muted-foreground">
+                      {article.author.name}
+                    </span>
+                  </div>
+                  <div className="text-sm ml-3 text-muted-foreground">
+                    {article.createdAt.toDateString()}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        </Card>
-      ))}
+              </Link>
+            </div>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }
