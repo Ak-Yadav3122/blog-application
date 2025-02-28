@@ -18,7 +18,7 @@ const page = async () => {
             </h2>
 
             <p className="mt-4 text-lg text-pink-500 dark:text-gray-300">
-              Discover our most popular and trending content
+            Dive Into Ideas, Explore the Unseen
             </p>
           </div>
 
