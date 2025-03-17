@@ -65,7 +65,7 @@ export const createArticles = async (
   if (!existingUser) {
     return {
       errors: {
-        formErrors: ["User not found. Please register before creating an article."],
+        formErrors: ["User are not found. Please register before creating an article."],
       },
     };
   }
@@ -76,7 +76,7 @@ export const createArticles = async (
   if (!imageFile || imageFile?.name === "undefined") {
     return {
       errors: {
-        featuredImage: ["Image file is required."],
+        featuredImage: ["Image file is must be required."],
       },
     };
   }
@@ -105,7 +105,7 @@ export const createArticles = async (
   if (!imageUrl) {
     return {
       errors: {
-        featuredImage: ["Failed to upload image. Please try again."],
+        featuredImage: ["Failed to upload your image. Please try again."],
       },
     };
   }
