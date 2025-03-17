@@ -62,7 +62,7 @@ export const updateArticles = async (
 
     if (!existingArticle) {
         return {
-            errors: { formErrors: ["Article not found."] },
+            errors: { formErrors: ["Article are not found."] },
         };
     }
 
@@ -73,7 +73,7 @@ export const updateArticles = async (
 
     if (!user || existingArticle.authorId !== user.id) {
         return {
-            errors: { formErrors: ["You are not authorized to edit this article."] },
+            errors: { formErrors: ["You have not authority to edit this article."] },
         };
     }
 
@@ -106,7 +106,7 @@ export const updateArticles = async (
                 imageUrl = uploadResult.secure_url;
             } else {
                 return {
-                    errors: { featuredImage: ["Failed to upload image. Please try again."] },
+                    errors: { featuredImage: ["Failed to upload image. Please try again later."] },
                 };
             }
         } catch (error) {
