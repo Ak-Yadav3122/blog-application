@@ -28,7 +28,7 @@ export const createComments = async (articleId:string,prevState: CreateCommentFo
     if(!userId){
         return {
             errors:{
-                formErrors:['You have to login first']
+                formErrors:['Hey User, You have to login first']
             }
         }
     }
@@ -38,7 +38,7 @@ export const createComments = async (articleId:string,prevState: CreateCommentFo
     if (!existingUser) {
         return {
           errors: {
-            formErrors: ["User not found. Please register before adding comment."],
+            formErrors: ["User are not found. Please register before adding your comment."],
           },
         };
       }
