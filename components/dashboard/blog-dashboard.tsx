@@ -55,7 +55,7 @@ export async function BlogDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{articles.length}</div> 
             <p className="text-xs text-muted-foreground mt-1">
-              +5 from last month
+              +10 from last month
             </p>
           </CardContent>
         </Card>
@@ -70,7 +70,7 @@ export async function BlogDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{totalComments}</div>
             <p className="text-xs text-muted-foreground mt-1">
-              12 awaiting moderation
+              15 awaiting moderation
             </p>
           </CardContent>
         </Card>
