@@ -114,8 +114,6 @@ const TutorialPage = () => {
   );
 };
 
-// Dummy Data
-// link: "/tutorials/web-dev"
 const categories = [
   {
     title: "Web Development",
