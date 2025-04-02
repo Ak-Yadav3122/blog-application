@@ -34,7 +34,7 @@ const HeroSection = () => {
             Explore the World Through
             <span className="bg-gradient-to-r from-violet-300 to-indigo-700 bg-clip-text text-transparent">
               {" "}
-             Your Words
+             Words
             </span>
           </h1>
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 size="lg"
                 className="w-full rounded-full px-8 py-4 text-lg sm:w-auto hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
-                Start Reading
+                Start Reading Now
               </Button>
             </Link>
             <Link href="/">
