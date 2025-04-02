@@ -34,7 +34,7 @@ const HeroSection = () => {
             Explore the World Through
             <span className="bg-gradient-to-r from-violet-300 to-indigo-700 bg-clip-text text-transparent">
               {" "}
-              Words
+             Your Words
             </span>
           </h1>
 

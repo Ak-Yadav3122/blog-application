@@ -16,7 +16,7 @@ export async function toggleLike(articleId : string) {
   });
 
   if (!user) {
-    throw new Error("User does not exist in the database.");
+    throw new Error("User does not exist in the database, Please create the account");
   }
 
   // Check if the user has already liked the article
