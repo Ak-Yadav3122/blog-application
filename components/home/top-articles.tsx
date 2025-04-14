@@ -70,7 +70,7 @@ export async function TopArticles() {
               {/* Article Meta Info */}
               <div className="mt-6 flex items-center justify-between text-sm text-gray-800 dark:text-gray-400">
                 <span>{new Date(article.createdAt).toDateString()}</span>
-                <span>{15} min read</span>
+                <span>{10} min read</span>
               </div>
             </Link>
           </div>
