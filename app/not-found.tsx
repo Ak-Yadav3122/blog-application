@@ -13,7 +13,7 @@ const NotFound = () => {
       
       <Link href="/">
         <Button size="lg" className="rounded-full px-8 py-6 text-lg bg-indigo-600 hover:bg-indigo-500">
-          Go Back to Home
+          Go Back Home
         </Button>
       </Link>
       
