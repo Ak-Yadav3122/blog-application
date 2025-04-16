@@ -26,7 +26,7 @@ const AboutSection = () => {
               Welcome to Blogify, a place where knowledge meets creativity. Our platform is dedicated to sharing insights, industry trends, and inspiring stories from thought leaders worldwide.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Whether you're here to learn, share, or explore new perspectives, Blogify is your gateway to valuable content that sparks curiosity and innovation.
+              Whether you&apos;re here to learn, share, or explore new perspectives, Blogify is your gateway to valuable content that sparks curiosity and innovation.
             </p>
             
             {/* Call to Action */}
@@ -62,7 +62,7 @@ const AboutSection = () => {
             Get in <span className="bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Have a question? Want to collaborate? We'd love to hear from you!
+            Have a question? Want to collaborate? We&apos;d love to hear from you!
           </p>
         </div>
 
