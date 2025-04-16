@@ -6,7 +6,6 @@ import React from "react";
 const layout = async ({ children }: { children: React.ReactNode }) => {
   const user = await currentUser();
 
-  // rendering even without authentication
   if (!user) {
     return (
       <div>
