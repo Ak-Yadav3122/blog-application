@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           <p className="mx-auto max-w-2xl text-lg text-gray-300 md:text-xl">
             Discover insightful articles, thought-provoking stories, and expert
-            perspectives on technology, lifestyle, and innovation.
+            perspectives on Technology, Lifestyle, and Innovation.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row md:items-start">
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 size="lg"
                 className="w-full rounded-full px-8 py-4 text-lg sm:w-auto hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
-                Start Reading Now
+                Start Reading Now...
               </Button>
             </Link>
             <Link href="/">
