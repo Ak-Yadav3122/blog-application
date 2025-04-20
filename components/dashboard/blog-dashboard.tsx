@@ -83,9 +83,9 @@ export async function BlogDashboard() {
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">4.2m</div>
+            <div className="text-2xl font-bold">4.5m</div>
             <p className="text-xs text-muted-foreground mt-1">
-              +0.8m from last month
+              +0.9m from last month
             </p>
           </CardContent>
         </Card>
