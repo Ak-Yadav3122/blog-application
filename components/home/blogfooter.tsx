@@ -62,7 +62,6 @@ export function BlogFooter() {
               </Button>
             </div>
           </div>
-          {/* Newsletter */}
           <div className="space-y-4 md:col-span-2 lg:col-span-2">
             <h3 className="text-2xl font-bold">
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
@@ -89,7 +88,7 @@ export function BlogFooter() {
         {/* Copyright */}
         <div className="mt-12 border-t pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Blogify. All rights reserved.
+            © {new Date().getFullYear()} Blogify. All rights are reserved.
           </p>
         </div>
       </div>
