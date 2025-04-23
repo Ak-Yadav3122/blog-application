@@ -57,7 +57,7 @@ const HeroSection = () => {
                 size="lg"
                 className="w-full rounded-full px-8 py-4 text-lg sm:w-auto hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900"
               >
-                Explore Topics
+                Explore Topics...
               </Button>
             </Link>
           </div>
